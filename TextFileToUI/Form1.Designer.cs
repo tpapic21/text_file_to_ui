@@ -51,6 +51,7 @@
             this.browseFileBtn.TabIndex = 0;
             this.browseFileBtn.Text = "Browse file";
             this.browseFileBtn.UseVisualStyleBackColor = true;
+
             // 
             // nameLabel
             // 
@@ -65,7 +66,7 @@
             // 
             this.fullNameBox.Location = new System.Drawing.Point(128, 45);
             this.fullNameBox.Name = "fullNameBox";
-            this.fullNameBox.Size = new System.Drawing.Size(157, 20);
+            this.fullNameBox.Size = new System.Drawing.Size(239, 20);
             this.fullNameBox.TabIndex = 2;
             // 
             // yearLabel
@@ -81,7 +82,7 @@
             // 
             this.yearOfBirth.Location = new System.Drawing.Point(128, 90);
             this.yearOfBirth.Name = "yearOfBirth";
-            this.yearOfBirth.Size = new System.Drawing.Size(157, 20);
+            this.yearOfBirth.Size = new System.Drawing.Size(239, 20);
             this.yearOfBirth.TabIndex = 2;
             // 
             // cityLabel
@@ -97,7 +98,7 @@
             // 
             this.cityBox.Location = new System.Drawing.Point(128, 139);
             this.cityBox.Name = "cityBox";
-            this.cityBox.Size = new System.Drawing.Size(157, 20);
+            this.cityBox.Size = new System.Drawing.Size(239, 20);
             this.cityBox.TabIndex = 2;
             // 
             // facultyLabel
@@ -113,7 +114,7 @@
             // 
             this.facultyBox.Location = new System.Drawing.Point(128, 185);
             this.facultyBox.Name = "facultyBox";
-            this.facultyBox.Size = new System.Drawing.Size(157, 20);
+            this.facultyBox.Size = new System.Drawing.Size(239, 20);
             this.facultyBox.TabIndex = 2;
             // 
             // roleLabel
@@ -129,7 +130,7 @@
             // 
             this.roleBox.Location = new System.Drawing.Point(128, 234);
             this.roleBox.Name = "roleBox";
-            this.roleBox.Size = new System.Drawing.Size(157, 20);
+            this.roleBox.Size = new System.Drawing.Size(239, 20);
             this.roleBox.TabIndex = 2;
             // 
             // specificRoleLabel
@@ -145,14 +146,14 @@
             // 
             this.specificAttributeBox.Location = new System.Drawing.Point(128, 291);
             this.specificAttributeBox.Name = "specificAttributeBox";
-            this.specificAttributeBox.Size = new System.Drawing.Size(157, 20);
+            this.specificAttributeBox.Size = new System.Drawing.Size(239, 20);
             this.specificAttributeBox.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 450);
+            this.ClientSize = new System.Drawing.Size(443, 450);
             this.Controls.Add(this.specificAttributeBox);
             this.Controls.Add(this.specificRoleLabel);
             this.Controls.Add(this.roleBox);

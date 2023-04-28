@@ -18,7 +18,8 @@ namespace TextFileToUI
     public partial class Form1 : Form
     {
         UserFileReading userFile;
-      
+        UserParser userParser;
+        UserDisplayer userDisplayer;
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +27,15 @@ namespace TextFileToUI
             
         }
 
-    
+        private void browseFileBtn_Click(object sender, EventArgs e)
+        {
+            userFile.ChooseFile(this);
+
+            userParser = new UserParser(userFile.ReadFile());
+            userDisplayer = new UserDisplayer(userParser.SortData(), fullNameBox, yearOfBirth, cityBox, facultyBox, roleBox, specificAttributeBox);
+            userDisplayer.PutData();
+            specificRoleLabel.Text = userDisplayer.LabelText();
+        }
     }
 
     public class UserFileReading
@@ -101,6 +110,47 @@ namespace TextFileToUI
                 return null;
             }
 
+        }
+
+    }
+
+    public class UserDisplayer
+    {
+        User User;
+        string textForLabel = null;
+        TextBox nameT,yearT,cityT,facultyT,roleT,specificT;
+        public UserDisplayer(User user, TextBox name,TextBox year, TextBox city, TextBox faculty, TextBox role, TextBox specific) { 
+
+            User= user;
+            nameT = name;
+            yearT= year;
+            cityT= city;
+            facultyT= faculty;
+            roleT= role;
+            specificT= specific;
+        }
+
+        public void PutData()
+        {
+            nameT.Text=User.Ime+" "+User.Prezime;
+            yearT.Text = User.GodinaRodjenja.ToString();
+            cityT.Text = User.GradRodjenja;
+            facultyT.Text = User.Fakultet;
+            roleT.Text = User.Uloga;
+            if (User.NajdraziKolegij != null)
+            {
+                specificT.Text = User.NajdraziKolegij;
+                textForLabel = "Najdraži kolegij: ";
+            }
+            else
+            { specificT.Text = User.Katedra; textForLabel = "Katedra: "; }
+
+            
+        } 
+
+        public string LabelText()
+        {
+            return textForLabel;
         }
 
     }
