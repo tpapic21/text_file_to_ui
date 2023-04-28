@@ -51,7 +51,7 @@
             this.browseFileBtn.TabIndex = 0;
             this.browseFileBtn.Text = "Browse file";
             this.browseFileBtn.UseVisualStyleBackColor = true;
-
+            this.browseFileBtn.Click += new System.EventHandler(this.browseFileBtn_Click);
             // 
             // nameLabel
             // 
