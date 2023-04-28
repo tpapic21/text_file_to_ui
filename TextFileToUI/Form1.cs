@@ -30,6 +30,10 @@ namespace TextFileToUI
         private void browseFileBtn_Click(object sender, EventArgs e)
         {
             userFile.ChooseFile(this);
+            userParser = new UserParser(userFile.ReadFile());
+            userDisplayer = new UserDisplayer(userParser.SortData(), fullNameBox, yearOfBirth, cityBox, facultyBox, roleBox, specificAttributeBox);
+            userDisplayer.PutData();
+            specificRoleLabel.Text = userDisplayer.LabelText();
         }
     }
 
