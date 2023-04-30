@@ -1,6 +1,6 @@
 ﻿namespace TextFileToUI
 {
-    partial class Form1
+    partial class UserInfoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -149,7 +149,7 @@
             this.specificAttributeBox.Size = new System.Drawing.Size(239, 20);
             this.specificAttributeBox.TabIndex = 2;
             // 
-            // Form1
+            // UserInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,7 +167,7 @@
             this.Controls.Add(this.fullNameBox);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.browseFileBtn);
-            this.Name = "Form1";
+            this.Name = "UserInfoForm";
             this.Text = "File";
             this.ResumeLayout(false);
             this.PerformLayout();
